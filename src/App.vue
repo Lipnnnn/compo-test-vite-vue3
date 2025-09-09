@@ -3,6 +3,7 @@ import { FilterForm } from "@lipnstar/component-library";
 import '@lipnstar/component-library/dist/index.css'
 import type { FilterFormConfig } from '@lipnstar/component-library'
 import TuiAmountInwords from './components/tui-amount-inwords/tui-amount-inwords.vue'
+import SlidVerify from './components/slid-verify/index.vue'
 
 const fields:FilterFormConfig[] = [
   {
@@ -20,6 +21,7 @@ const handleSearch = (values: any) => {
 
 <template>
   <div>
+    <div style="margin: 20px"><SlidVerify /></div>
     <TuiAmountInwords value="100.1101" />
     <FilterForm :fields="fields" @search="handleSearch" />
   </div>
